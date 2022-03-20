@@ -6,23 +6,7 @@ export const NotificationContext = createContext()
 
 export default function NotificationProvider(props) 
 {
-    const [notifications, setNotifications] = useState([
-        {
-            text: "Hello World1",
-            type: "error",
-            id: v4()
-        },
-        {
-            text: "Hello World2",
-            type: "success",
-            id: v4()
-        },
-        {
-            text: "Hello World3",
-            type: "success",
-            id: v4()
-        }
-    ])
+    const [notifications, setNotifications] = useState([])
 
     const destroyThis = index =>
     {
