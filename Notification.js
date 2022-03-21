@@ -38,6 +38,7 @@ export default function useNotification({ index, text, type, destroyThis })
         {
             endNotification()
         }
+        return () => setNotificationClassnames("notification" + (type === "error" ? " notification-error" : ""))
     }, [barWidth])
 
     useEffect(() => 
